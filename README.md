@@ -1,16 +1,11 @@
 # shopping_one_app_ui
 
-A new Flutter project.
+A preview of the app
 
-## Getting Started
+https://github.com/Fmaj1234/shopping_one_app_ui/assets/49940296/3a56ec85-5c36-4907-86a7-5d39f93638a1
 
-This project is a starting point for a Flutter application.
+![Screenshot_20230726-175957_iphone13midnight_portrait](https://github.com/Fmaj1234/shopping_one_app_ui/assets/49940296/ed0e238e-944c-49aa-ae01-5e052122741a)
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot_20230726-184732_iphone13blue_portrait](https://github.com/Fmaj1234/shopping_one_app_ui/assets/49940296/f7862ba3-730f-46fe-985a-783ffce4b0b6)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20230726-180006_iphone13blue_portrait](https://github.com/Fmaj1234/shopping_one_app_ui/assets/49940296/39444c26-e759-4fa0-9a91-6bf83ab48429)
