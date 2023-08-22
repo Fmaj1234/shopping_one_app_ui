@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class CartScreen extends StatelessWidget {
   var pNames = [
@@ -136,7 +137,12 @@ class CartScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              )
+                  .animate()
+                  .fadeIn(
+                    delay: Duration(milliseconds: 200 * i),
+                  )
+                  .scale(),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -147,7 +153,7 @@ class CartScreen extends StatelessWidget {
                     color: Colors.black,
                     fontSize: 18,
                   ),
-                ),
+                ).animate().fade(duration: const Duration(milliseconds: 800)),
                 Text(
                   "\$242.20",
                   style: TextStyle(
@@ -157,7 +163,7 @@ class CartScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
+            ).animate().fade(duration: const Duration(milliseconds: 800)),
             SizedBox(height: 20),
             Container(
               height: 50,
@@ -176,7 +182,13 @@ class CartScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
+            ).animate().slideX(
+                  begin: 1,
+                  duration: const Duration(
+                    milliseconds: 600,
+                  ),
+                  curve: Curves.fastLinearToSlowEaseIn,
+                ),
           ],
         ),
       ),

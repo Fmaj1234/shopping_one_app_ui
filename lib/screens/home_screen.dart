@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:shopping_one_app_ui/widgets/grid_items.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -50,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   child: Icon(CupertinoIcons.cart, size: 28),
-                ),
+                ).animate().fade(duration: const Duration(milliseconds: 800)),
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
@@ -65,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   child: Icon(CupertinoIcons.search, size: 28),
-                ),
+                ).animate().fade(duration: const Duration(milliseconds: 800)),
               ],
             ),
           ),
@@ -80,7 +81,14 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
-                ),
+                )
+                    .animate(
+                      delay: const Duration(milliseconds: 600),
+                    )
+                    .fade(
+                      duration: const Duration(milliseconds: 600),
+                    )
+                    .slideX(),
                 SizedBox(height: 5),
                 Text(
                   "Lets shop something!",
@@ -88,7 +96,14 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 18,
                     color: Colors.black45,
                   ),
-                ),
+                )
+                    .animate(
+                      delay: const Duration(milliseconds: 800),
+                    )
+                    .fade(
+                      duration: const Duration(milliseconds: 800),
+                    )
+                    .slideX(),
               ],
             ),
           ),
@@ -152,7 +167,19 @@ class HomeScreen extends StatelessWidget {
                   ),
               ],
             ),
-          ),
+          )
+              .animate()
+              .slideX(
+                  begin: 10,
+                  duration: const Duration(
+                    milliseconds: 400,
+                  ),
+                  curve: Curves.easeOut)
+              .fadeIn(
+                begin: 0.1,
+                delay: const Duration(milliseconds: 400),
+              )
+              .moveX(end: 0),
           SizedBox(height: 20),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
@@ -208,7 +235,19 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          GridItems(),
+          GridItems()
+              // .animate()
+              // .fadeIn()
+              // .slideY(curve: Curves.fastLinearToSlowEaseIn),
+
+              .animate()
+              .slideY(
+                begin: 1,
+                duration: const Duration(
+                  milliseconds: 800,
+                ),
+                curve: Curves.fastLinearToSlowEaseIn,
+              )
         ],
       ),
     );
